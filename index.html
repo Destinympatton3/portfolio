@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destiny's Homepage</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="name">Destiny</div>
+    <nav>
+      <a class= "active">HOME</a>
+      <a href="#">PROJECTS</a>
+      <a href="#">EXPERIENCE</a>
+      <a href="#">RESUME</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="image-wrapper">
+      <div class="star-bg"></div>
+      <img src="/assets/img/Destintatcafe.JPG" alt="Profile photo" class="profile-image">
+      <div class="hover-comment">This website is meet the critera of teh WGMA</div>
+  </div>
+    </div>]
+    <script>
+      const imageWrapper = document.getElementById('imageWrapper');
+      const hoverComment = document.getElementById('hoverComment');
+  
+      let timer = null;
+  
+      imageWrapper.addEventListener('mouseenter', () => {
+        hoverComment.classList.add('visible');
+  
+        if (timer) {
+          clearTimeout(timer);
+        }
+  
+        timer = setTimeout(() => {
+          hoverComment.classList.remove('visible');
+        }, 30000); // 30 seconds
+      });
+    </script>
+
+    <div class="bio">
+      <p><strong>Your Name (b. 199X)</strong> is a student and writer from [your location].</p>
+      <p>
+        You can find their work in <em>Example Journal, Poetry Now, Words & Wonder</em>, and more.
+      </p>
+      <p>
+        They are currently based in <span class="red">City A</span>. Previously, they lived in <span class="red">City B</span>, 
+        where they taught and studied information and poetry.
+      </p>
+      <p>
+        They grew up in <span class="blue">City C</span>, but claim <span class="red">City D</span>.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>
