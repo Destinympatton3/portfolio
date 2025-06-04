@@ -1,229 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Georgia', serif;
-    background: #c7f8c3;
-    color: #111;
-    padding: 4px;
-    margin: auto;
-    color: #111;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 50px;
-  }
-  
-  .name {
-    font-weight: bold;
-    letter-spacing: 0.05em;
-  }
-  
-  nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #000;
-  }
-  
-  main {
-    text-align: center;
-  }
-  
-  .image-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 250px;
-    height: 250px;
-    margin-bottom: 30px;
-  }
-  
-  .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    position: relative;
-    z-index: 2;
-    border: 5px solid white;
-  }
-  
-  .star-bg {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(closest-side, #ffa500 50%, transparent 51%);
-    transform: translate(-50%, -50%) rotate(0deg);
-    clip-path: polygon(
-      50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
-      50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
-    );
-    z-index: 1;
-  }
-  
-  .bio {
-    text-align: left;
-    margin-top: 20px;
-  }
-  
-  .bio em {
-    color: #d1495b;
-  }
-  
-  .red {
-    color: #d1495b;
-  }
-  
-  .blue {
-    color: #3e7cb1;
-  }
-  
+/* Center the entire page */
+.page-center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  
-  header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    font-size: 14px;
-  }
-  
-  nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #000;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-  }
-  
-  .image-wrapper {
-    position: relative;
-    width: 280px;
-    height: 280px;
-    margin-bottom: 40px;
-  }
-  
-  .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid white;}
+/* Header style */
+header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Georgia', serif;
-      color: #111;
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-    
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-      margin-bottom: 40px;
-    }
-    
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #000;
-    }
-    
-    main {
-      text-align: center;
-    }
-    
-    .image-wrapper {
-      position: relative;
-      width: 280px;
-      height: 280px;
-      margin: auto;
-      margin-bottom: 30px;
-    }
-    
-    .star-bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 360px;
-      height: 360px;
-      background: #ffc107;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
-        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
-      );
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-    
-    .profile-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 6px solid white;
-      position: relative;
-      z-index: 2;
-    }
-    
-    .bio {
-      text-align: left;
-      margin: auto;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-    
-    .bio em {
-      color: #c0392b;
-    }
-    
-    .red {
-      color: #c0392b;
-    }
-    
-    .blue {
-      color: #3498db;
-    }
-    
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+}
+.active{
+    color: #c0392b;
+}
+nav :hover{
+    color: #3498db;
+}
+/* Main layout */
+main {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+body{
+  background-color: #FAEDCD;
+}
 
-    .hover-comment {
-      font-family: Georgia, serif;
-      font-size: 16px;
-      color: #444;
-      max-width: 220px;
-      opacity: 0;
-      transform: translateX(10px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-    
-    .hover-comment.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    
+/* Image and comment */
+.logo{
+  width: 100px;
+}
+.image-comment-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: visible;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.image-wrapper:hover {
+  box-shadow: 0 0 25px 8px rgba(255, 193, 7, 0.6);
+  border-radius: 50%;
+}
+
+.star-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  background: #d8ee31;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Comment */
+.hover-comment {
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  max-width: 220px;
+  font-size: 16px;
+  color: #333;
+}
+
+.hover-comment.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Bio section */
+.bio {
+  text-align: left;
+  max-width: 600px;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.bio em {
+  color: #c0392b;
+}
+
+.red {
+  color: #c0392b;
+}
+
+.blue {
+  color: #3498db;
+}

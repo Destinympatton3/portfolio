@@ -6,7 +6,6 @@ let timer = null;
 imageWrapper.addEventListener('mouseenter', () => {
   hoverComment.classList.add('visible');
 
-  // Reset timer if hovering again
   if (timer) {
     clearTimeout(timer);
   }
