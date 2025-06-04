@@ -21,8 +21,112 @@
           </nav>
         </header>
         <main>
+          <section class="projects-section">
+        
+            <!-- Filtering System! -->
+            <div id="type-filter">
+              <button data-type="all" class="filter-btn active">All</button>
+              <button data-type="academic" class="filter-btn">Academic</button>
+              <button data-type="self" class="filter-btn">Self</button>
+              <button data-type="work" class="filter-btn">Work</button>
+            </div>
             
+            <div class="projects-container">
+
+              <div class="project-card self" data-year="2025">
+                <div class="project-star">&#9733;</div>
+                <h3 class="project-title">Whisker Watch</h3>
+                <p class="project-type">Self Project</p>
+                <p class="project-description">Created a developing mobile and GIS based tool that collects spatial data on stray cat sightings to support research and improve access to animal care services,</p>
+                <button class="view-button" onclick="window.open('https://ritarcgis.maps.arcgis.com/apps/dashboards/385fa5447b6c4d0e8906a84fb325d439')">View Project</button>
+              </div>
+
+              <div class="project-card academic" data-year="2025">
+                <h3 class="project-title">Wikipedia in Academia (SQL Group Project)</h3>
+                <p class="project-type">Academic Project</p>
+                <p class="project-description">Analyzed 2024 Wikipedia data to evaluate academic credibility and compare scholarly trends with Google Scholar. Focused on data analysis and visualized key insights through charts and graphs.</p>
+                <button class="view-button" onclick="window.open('https://docs.google.com/presentation/d/1WIcm_e8E64k44q1B2XXyElzCZlpZgM3mrpE4U9Qp1lQ/edit?usp=sharing')">View Project</button>
+              </div>
+
+              <div class="project-card academic" data-year="2025">
+                <h3 class="project-title">Pylot Educational Website</h3>
+                <p class="project-type">Academic Project</p>
+                <p class="project-description">Collaboratively developed a beginner-friendly website that teaches users how to code in Python; Led UX and graphic design, focusing on visual clarity and intuitive user flow.</p>
+                <button class="view-button" disabled>Restricted</button>
+              </div>
+
+              <div class="project-card academic" data-year="2024">
+                <div class="project-star">&#9733;</div>
+                <h3 class="project-title">Train Infrastructure Accessibility In New York and Georiga</h3>
+                <p class="project-type">Academic Project</p>
+                <p class="project-description">Used ArcGIS to map and visualize accessibility disparities in subway systems across the North and South, highlighting gaps through spatial overlays, heatmaps, and network analysis.</p>
+                <button class="view-button" onclick="window.open('https://arcg.is/1f49K91')">View Project</button>
+              </div>
+        
+              <div class="project-card academic" data-year="2024">
+                <h3 class="project-title">BeReady - Natural Disaster App Prototype</h3>
+                <p class="project-type">Academic Project</p>
+                <p class="project-description">Contributed to the app’s color palette, core functionality, and background research as part of a collaborative design and development team.</p>
+                <button class="view-button" onclick="window.open('https://www.figma.com/proto/G2Qcfk1AdUAsyQSA1rMzkT/Los-Pabos-Prototype?node-id=170-382&node-type=canvas&t=qPaaGV3TuuOoZBlu-0&scaling=scale-down&content-scaling=fixed&page-id=14%3A2&starting-point-node-id=170%3A375&show-proto-sidebar=1')">View Project</button>
+              </div>
+
+              <div class="project-card self" data-year="2025">
+                <h3 class="project-title">The Little Guy Monitor</h3>
+                <p class="project-type">Self Project</p>
+                <p class="project-description">Used Google Teachable Machine to train a computer vision model for hamster sitters to identify stressed and unusual behaviors of Syrian hamsters.</p>
+                <button class="view-button" disabled>Restricted</button>
+              </div>
+
+              <div class="project-card self" data-year="2021">
+                <div class="project-star">&#9733;</div>
+                <h3 class="project-title">Zoom Class Simulator</h3>
+                <p class="project-type">Self Project</p>
+                <p class="project-description">Created a satirical game to simulate the chaos and quirks of online classes during 2020. This game has been played by over 570 people and has a overall rating of 71%.</p>
+                <button class="view-button" onclick="window.open('https://www.roblox.com/games/6748148614/Zoom-Class-Simulator')">View Project</button>
+              </div>
+
+              <div class="project-card self" data-year="2021">
+                <h3 class="project-title">Therapy Buddy Chat Bot</h3>
+                <p class="project-type">Self Project</p>
+                <p class="project-description">Developed an AI chat bot to support users by providing advice and friendly interactions. The chat bot functioned as a virtual buddy to foster positive engagement and emotional support.</p>
+                <button class="view-button" disabled>Restricted</button>
+              </div>
+        
+              <!-- <div class="project-card work" data-year="2023">
+                <div class="project-star">&#9733;</div>
+                <h3 class="project-title">AWS Internal Dashboard</h3>
+                <p class="project-type">Work Project</p>
+                <p class="project-description">Developed a responsive dashboard with live data visualization for internal metrics during my AWS internship.</p>
+                <button class="view-button" disabled>Restricted</button> -->
+              </div>
+            </div>
+          </section>
         </main>
     </div>
+    <!-- JS - added here since linking it doesnt work -->
+    <script>
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+    
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const selectedType = button.getAttribute('data-type');
+    
+          // Toggle active button style
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+    
+          // Show/hide cards based on type
+          projectCards.forEach(card => {
+            const cardType = card.classList.contains(selectedType);
+            if (selectedType === 'all' || cardType) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
 </body>
 </html>
