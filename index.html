@@ -56,20 +56,5 @@
         
       </main>
     </div>
-  
-    <script>
-      const imageWrapper = document.getElementById('imageWrapper');
-      const hoverComment = document.getElementById('hoverComment');
-  
-      let timer;
-  
-      imageWrapper.addEventListener('mouseenter', () => {
-        hoverComment.classList.add('visible');
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-          hoverComment.classList.remove('visible');
-        }, 30000);
-      });
-    </script>
   </body>
 </html>
