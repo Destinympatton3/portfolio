@@ -27,20 +27,29 @@
               <button data-type="all" class="filter-btn active">All</button>
               <button data-type="academic" class="filter-btn">Academic</button>
               <button data-type="self" class="filter-btn">Self</button>
-              <button data-type="work" class="filter-btn">Work</button>
+              <button data-type="data" class="filter-btn">Data</button>
+              <button data-type="gis" class="filter-btn">GIS</button>
             </div>
             
             <div class="projects-container">
 
-              <div class="project-card self" data-year="2025">
+              <div class="project-card gis" data-year="2025">
                 <div class="project-star">&#9733;</div>
                 <h3 class="project-title">Whisker Watch</h3>
-                <p class="project-type">Self Project</p>
-                <p class="project-description">Created a developing mobile and GIS based tool that collects spatial data on stray cat sightings to support research and improve access to animal care services,</p>
+                <p class="project-type">GIS Project</p>
+                <p class="project-description">Created a developing mobile and GIS based tool using ArcGIS Survey123 that collects spatial data on stray cat sightings to support research and improve access to animal care services.</p>
                 <button class="view-button" onclick="window.open('https://ritarcgis.maps.arcgis.com/apps/dashboards/385fa5447b6c4d0e8906a84fb325d439')">View Project</button>
               </div>
 
-              <div class="project-card academic" data-year="2025">
+              <div class="project-card gis" data-year="2025">
+                <div class="project-star">&#9733;</div>
+                <h3 class="project-title">Southern Women's Healthcare Access</h3>
+                <p class="project-type">GIS Project</p>
+                <p class="project-description">Created a thematic map using ArcGIS Online showing the count of women in Alabama for a study on Women's Access to Preventive Care.</p>
+                <button class="view-button" onclick="window.open('https://arcg.is/1yriqD1')">View Project</button>
+              </div>
+
+              <div class="project-card data" data-year="2025">
                 <h3 class="project-title">Wikipedia in Academia (SQL Group Project)</h3>
                 <p class="project-type">Academic Project</p>
                 <p class="project-description">Analyzed 2024 Wikipedia data to evaluate academic credibility and compare scholarly trends with Google Scholar. Focused on data analysis and visualized key insights through charts and graphs.</p>
@@ -54,11 +63,11 @@
                 <button class="view-button" disabled>Restricted</button>
               </div>
 
-              <div class="project-card academic" data-year="2024">
+              <div class="project-card gis" data-year="2024">
                 <div class="project-star">&#9733;</div>
                 <h3 class="project-title">Train Infrastructure Accessibility In New York and Georiga</h3>
-                <p class="project-type">Academic Project</p>
-                <p class="project-description">Used ArcGIS to map and visualize accessibility disparities in subway systems across the North and South, highlighting gaps through spatial overlays, heatmaps, and network analysis.</p>
+                <p class="project-type">GIS Project</p>
+                <p class="project-description">Used ArcGIS Pro to map and visualize accessibility disparities in subway systems across the North and South, highlighting gaps through spatial overlays, heatmaps, and network analysis. Documented findings using ArcGIS StoryMaps.</p>
                 <button class="view-button" onclick="window.open('https://arcg.is/1f49K91')">View Project</button>
               </div>
         
@@ -90,18 +99,13 @@
                 <p class="project-description">Developed an AI chat bot to support users by providing advice and friendly interactions. The chat bot functioned as a virtual buddy to foster positive engagement and emotional support.</p>
                 <button class="view-button" disabled>Restricted</button>
               </div>
-        
-              <!-- <div class="project-card work" data-year="2023">
-                <div class="project-star">&#9733;</div>
-                <h3 class="project-title">AWS Internal Dashboard</h3>
-                <p class="project-type">Work Project</p>
-                <p class="project-description">Developed a responsive dashboard with live data visualization for internal metrics during my AWS internship.</p>
-                <button class="view-button" disabled>Restricted</button> -->
+
               </div>
             </div>
           </section>
         </main>
     </div>
+
     <!-- JS - added here since linking it doesnt work in seprate file -->
     <script>
       const filterButtons = document.querySelectorAll('.filter-btn');
