@@ -39,6 +39,9 @@ main {
 body{
   background-color: #FAEDCD;
 }
+.articles-grid{
+  border: 2px double black;
+}
 
 /* Image and comment */
 .logo{
@@ -108,7 +111,7 @@ body{
 /* Bio section */
 .bio {
   text-align: left;
-  max-width: 600px;
+  max-width: 800px;
   margin-top: 20px;
   line-height: 1.6;
 }
